@@ -85,7 +85,6 @@ func buildBody(body interface{}) (*bytes.Buffer, error) {
 // Type and value of body must be nil for an empty body
 func (c *Client) NewRequest(method, urlStr string, body interface{}, query interface{}) (*http.Request, error) {
 	u, err := c.buildURL(urlStr, query)
-	fmt.Printf("url: %+v\n", u)
 
 	var b *bytes.Buffer
 	if body != nil {
